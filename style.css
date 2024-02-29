@@ -44,7 +44,7 @@ body {
     width: var(--item-size);  
     height: var(--item-size);
     vertical-align: middle;
-    background-image: url(/InvSprite.webp);
+    background-image: url(InvSprite.webp);
 }
 
 .slot {
