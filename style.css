@@ -1,0 +1,63 @@
+:root {  
+    --item-size: 32px;
+    --gap-size: 4px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+body {  
+    display: flex;  
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;  
+    min-height: 100vh;
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box;  
+}
+
+.header {
+    clear: both;
+    display: flex;
+    justify-content: center;
+    background-color: #F9FAFB;
+}
+
+.footer {
+    clear: both;
+    display: flex;
+    justify-content: center;
+    background-color: #F9FAFB;
+}
+
+.inventory {
+    display: grid;
+    background-image: none;
+    grid-template-columns: repeat(9, var(--item-size));
+    grid-template-rows: repeat(6, var(--item-size));
+    gap: var(--gap-size);
+}
+
+.item {
+    width: var(--item-size);  
+    height: var(--item-size);
+    vertical-align: middle;
+    background-image: url(/InvSprite.webp);
+}
+
+.slot {
+    position: relative;
+    display: inline-block;
+    background: #8B8B8B no-repeat center center / var(--item-size) var(--item-size);
+    border: 2px solid;
+    border-color: #373737 #FFF #FFF #373737;
+    box-sizing: content-box;
+    width: var(--item-size);
+    height: var(--item-size);
+    font-size: 16px;
+    line-height: 1;
+    text-align: left;
+    vertical-align: bottom;
+}
