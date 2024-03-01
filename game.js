@@ -2,13 +2,6 @@ window.onload = function() {
     init();
 };
 
-level = [
-    ['Copper Ingot', 'Brick'],
-    ['Bamboo', 'Stick'],
-    ['Granite', 'Dirt'],
-    ['Block of Coal', 'Black Concrete']
-]
-
 itemArray = [];
 clickedItem = -1;
 targetItem = -1;
