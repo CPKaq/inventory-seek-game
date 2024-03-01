@@ -1,10 +1,10 @@
 level = [
-    ['Copper Ingot', 'Brick'],
-    ['Bamboo', 'Stick'],
-    ['Clay Ball', 'Snowball'],
-    ['Block of Diamond', 'Light Blue Wool'],
-    ['Coal', 'Flint'],
-    ['Calcite', 'Snow Block'],
-    ['Granite', 'Dirt'],
-    ['Block of Coal', 'Black Concrete']
+    ['Copper Ingot', 'Brick', '铜锭', '红砖'],
+    ['Bamboo', 'Stick', '竹子', '木棍'],
+    ['Clay Ball', 'Snowball', '黏土球', '雪球'],
+    ['Block of Diamond', 'Light Blue Wool', '钻石块', '淡蓝色羊毛'],
+    ['Coal', 'Flint', '煤炭', '燧石'],
+    ['Calcite', 'Snow Block', '方解石', '雪块'],
+    ['Granite', 'Dirt', '花岗岩', '泥土'],
+    ['Block of Coal', 'Black Concrete', '煤炭块', '黑色混凝土']
 ]
