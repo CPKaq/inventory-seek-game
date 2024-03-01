@@ -10,6 +10,9 @@ level = [
 ]
 
 itemArray = [];
+clickedItem = -1;
+targetItem = -1;
+levelId = 0;
 
 function init() {
     var invDOM = document.getElementById('inventory');  
@@ -20,27 +23,33 @@ function init() {
         slotDOM.className = 'slot';
         var itemDOM = document.createElement('div');
         itemDOM.className = 'item';
-        setItem(itemDOM, block = 'Copper Ingot');
         
         slotDOM.appendChild(itemDOM);
         invDOM.appendChild(slotDOM);  
 
-        slotDOM.addEventListener('click', function(event) {  
-            console.log(Array.prototype.indexOf.call(invDOM.children, event.target.parentNode));
+        slotDOM.addEventListener('click', function(event) {
+            clickedItem = Array.prototype.indexOf.call(invDOM.children, event.target.parentNode);
+            if (clickedItem == targetItem) {
+                levelId++;
+                newLevel();
+            }
         });
         
         itemArray.push(itemDOM);  
     }
 
-    levelBlock = level[3];
-
-    setLevel(levelBlock[0], levelBlock[1]);
+    newLevel();
 };
 
+function newLevel() {
+    targetItem = Math.floor(Math.random() * 54);
+    levelBlock = level[levelId];
+    setLevel(levelBlock[0], levelBlock[1]);
+}
+
 function setLevel(item1, item2) {
-    var randomNum = Math.floor(Math.random() * 54);
     for (var i = 0; i < 54; i++) {
-        setItem(itemArray[i], i == randomNum ? item2 : item1);
+        setItem(itemArray[i], i == targetItem ? item2 : item1);
     }
 }
     
