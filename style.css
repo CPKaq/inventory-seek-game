@@ -16,6 +16,7 @@ body {
     margin: 0;  
     padding: 0;  
     box-sizing: border-box;  
+    background: #C6C6C6;
 }
 
 .header {
@@ -32,12 +33,21 @@ body {
     background-color: #F9FAFB;
 }
 
+.inv-title {
+    font-size: 120%;
+    padding: 0.4em 0;
+}
+
 .inventory {
     display: grid;
     background-image: none;
     grid-template-columns: repeat(9, var(--item-size));
     grid-template-rows: repeat(6, var(--item-size));
     gap: var(--gap-size);
+}
+
+.inv-info {
+    padding: 1em 0;
 }
 
 .item {
@@ -63,5 +73,6 @@ body {
 }
 
 .item-name {
-    color: red;
+    color: #AA0000;
+    font-weight: bold;
 }
