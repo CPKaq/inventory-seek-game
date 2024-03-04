@@ -1,6 +1,5 @@
 window.onload = function() {  
     init();
-    setInterval(timerUpdate, 100);
 };
 
 itemArray = [];

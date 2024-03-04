@@ -1,15 +1,16 @@
 var timerDOM = document.getElementById("timer");
-var isRunning = false;
 var decisecond = 0;
-
-function timerToggle() {
-    isRunning = !isRunning;
-}
+var intervalId;
 
 function timerUpdate() {
-    if(isRunning) {
-        decisecond++;
-        timerDOM.textContent = (decisecond / 10).toFixed(1);
-    }
+    decisecond++;
+    timerDOM.textContent = (decisecond / 10).toFixed(1);
 }
 
+function timerStart() {
+    intervalId = setInterval(timerUpdate, 100);
+}
+
+function timerStop() {
+    clearInterval(intervalId);
+}
