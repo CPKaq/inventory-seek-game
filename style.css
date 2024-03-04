@@ -76,3 +76,8 @@ body {
     color: #AA0000;
     font-weight: bold;
 }
+
+.timer {
+    font-size: 200%;
+    font-weight: bold;
+}
