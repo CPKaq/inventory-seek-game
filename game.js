@@ -32,7 +32,8 @@ function init() {
         itemArray.push(itemDOM);  
     }
 
-    newLevel();
+    // newLevel();
+    setLevel('Air', 'Air');
 };
 
 function newLevel() {
