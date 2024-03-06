@@ -11,3 +11,5 @@ level = [
     ['Green Concrete Powder', 'Moss Block', '绿色混凝土粉末', '苔藓块'],
     ['Block of Coal', 'Black Concrete', '煤炭块', '黑色混凝土']
 ]
+
+levelLength = level.length;

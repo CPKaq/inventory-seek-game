@@ -7,6 +7,10 @@
     width: 100%;
 }
 
+.hide {
+    display: none !important;
+}
+
 body {  
     display: flex;  
     flex-direction: column;
@@ -80,4 +84,19 @@ body {
 .timer {
     font-size: 200%;
     font-weight: bold;
+}
+
+.start-up {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--gap-size);
+    padding: 1em 0;
+}
+
+.button {
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    padding: 0.5em 0.8em;
+    background-color: #36B030;
 }

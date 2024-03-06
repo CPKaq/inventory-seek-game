@@ -5,6 +5,7 @@ window.onload = function() {
 itemArray = [];
 itemName1 = document.getElementById('item-name-1');
 itemName2 = document.getElementById('item-name-2');
+btnSimple = document.getElementById('btn-simple');
 clickedItem = -1;
 targetItem = -1;
 levelId = 0;
@@ -25,7 +26,11 @@ function init() {
             clickedItem = Array.prototype.indexOf.call(invDOM.children, event.target.parentNode);
             if (clickedItem == targetItem) {
                 levelId++;
-                newLevel();
+                if(levelId == levelLength) {
+                    endGame();
+                } else {
+                    newLevel();
+                }
             }
         });
         
@@ -34,6 +39,13 @@ function init() {
 
     // newLevel();
     setLevel('Air', 'Air');
+
+    btnSimple.addEventListener('click', function(event) {
+        newLevel();
+        document.getElementById('start-up').classList.add('hide');
+        document.getElementById('inv-info').classList.remove('hide');
+        timerStart();
+    });
 };
 
 function newLevel() {
@@ -62,4 +74,11 @@ function delItem(slot) {
     for (const child of slot.children) {
         child.remove();
     }
+}
+
+function endGame() {
+    clickedItem = -1;
+    targetItem = -1;
+    setLevel('Air', 'Air');
+    timerStop();
 }
